@@ -15,7 +15,7 @@ cd freetype-2.7.1/
 ./configure --prefix=/usr \
             --with-harfbuzz=no
 
-# Unless --with-harfbuzz=no, you have chiken&egg.
+# Provided --with-harfbuzz=yes, you have chiken&egg.
 
 make
 
