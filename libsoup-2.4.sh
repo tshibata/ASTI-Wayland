@@ -7,6 +7,7 @@ set -e
 
 # It requires:
 pkg-config --exists 'sqlite3' || ./sqlite3.sh
+pkg-config --exists 'libxml-2.0' || ./libxml-2.0.sh
 test -e /usr/lib/gio/modules/libgiognutls.so || ./glib-networking.sh
 
 # I don't know any better way to know if glib-networking is installed.
