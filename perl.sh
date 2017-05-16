@@ -15,6 +15,8 @@ cd perl-5.24.1/
             -Dprefix=/usr \
             -Dusethreads
 
+# It seems that perl loses XML::Parser because of -Dusethreads.
+
 make
 
 make install
