@@ -10,6 +10,7 @@ pkg-config --exists 'glib-2.0 >= 2.49.4' || ./glib-2.0.sh
 pkg-config --exists 'libtiff-4' || ./libtiff-4.sh
 pkg-config --exists 'libjpeg' || ./libjpeg.sh
 pkg-config --exists 'libpng' || ./libpng.sh
+pkg-config --exists 'gobject-introspection-1.0' || ./gobject-introspection-1.0.sh
 
 wget --no-clobber http://ftp.gnome.org/pub/gnome/sources/gdk-pixbuf/2.36/gdk-pixbuf-2.36.6.tar.xz
 
@@ -18,7 +19,8 @@ xzcat gdk-pixbuf-2.36.6.tar.xz | tar x
 
 cd gdk-pixbuf-2.36.6/
 
-./configure --prefix=/usr
+./configure --prefix=/usr \
+            --enable-introspection=yes
 
 make
 

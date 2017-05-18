@@ -7,6 +7,7 @@ set -e
 
 # It requires:
 pkg-config --exists 'glib-2.0 >= 2.31.2' || ./glib-2.0.sh
+pkg-config --exists 'gobject-introspection-1.0' || ./gobject-introspection-1.0.sh
 
 wget --no-clobber http://ftp.gnome.org/pub/gnome/sources/atk/2.24/atk-2.24.0.tar.xz
 
@@ -15,7 +16,8 @@ xzcat atk-2.24.0.tar.xz | tar x
 
 cd atk-2.24.0/
 
-./configure --prefix=/usr
+./configure --prefix=/usr \
+            --enable-introspection=yes
 
 make
 

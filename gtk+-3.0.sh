@@ -18,6 +18,7 @@ pkg-config --exists 'libjpeg' || ./libjpeg.sh
 pkg-config --exists 'epoxy >= 1.0' || ./epoxy.sh
 pkg-config --exists 'wayland-protocols >= 1.7' || ./wayland-protocols.sh
 pkg-config --exists 'xkbcommon >= 0.2.0' || ./xkbcommon.sh
+pkg-config --exists 'gobject-introspection-1.0' || ./gobject-introspection-1.0.sh
 fc-match | grep '' || ./fonts.sh
 
 wget --no-clobber http://ftp.gnome.org/pub/gnome/sources/gtk+/3.22/gtk+-3.22.12.tar.xz
@@ -31,7 +32,8 @@ cd gtk+-3.22.12/
             --prefix=/usr \
             --sysconfdir=/etc \
             --disable-x11-backend \
-            --enable-wayland-backend
+            --enable-wayland-backend \
+            --enable-introspection=yes
 
 # Unless CFLAGS='-DMESA_EGL_NO_X11_HEADERS', you need X11.
 
