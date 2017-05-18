@@ -8,6 +8,7 @@ set -e
 # It requires:
 pkg-config --exists 'sqlite3' || ./sqlite3.sh
 pkg-config --exists 'libxml-2.0' || ./libxml-2.0.sh
+pkg-config --exists 'vapigen' || ./vala.sh
 test -e `pkg-config --variable=giomoduledir gio-2.0`/libgiognutls.so || ./glib-networking.sh
 
 wget --no-clobber http://ftp.gnome.org/pub/gnome/sources/libsoup/2.58/libsoup-2.58.1.tar.xz
