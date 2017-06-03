@@ -19,6 +19,7 @@ pkg-config --exists 'enchant' || ./enchant.sh
 pkg-config --exists 'gstreamer-plugins-base-1.0' || ./gstreamer-plugins-base-1.0.sh
 pkg-config --exists 'libwebp' || ./libwebp.sh
 pkg-config --exists 'libsecret-1' || ./libsecret-1.sh
+pkg-config --exists 'adwaita-icon-theme' || ./adwaita-icon-theme.sh
 
 wget --no-clobber https://www.webkitgtk.org/releases/webkitgtk-2.17.3.tar.xz
 

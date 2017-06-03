@@ -12,6 +12,7 @@ pkg-config --exists 'pango >= 1.22.0' || ./pango.sh
 pkg-config --exists 'gtk+-3.0 >= 3.8.0' || ./gtk+-3.0.sh
 pkg-config --exists 'gnutls >= 3.2.7' || ./gnutls.sh
 perl -e "require XML::Parser" || ./Perl-XML-Parser.sh
+pkg-config --exists 'adwaita-icon-theme' || ./adwaita-icon-theme.sh
 
 wget --no-clobber http://ftp.gnome.org/pub/gnome/sources/vte/0.49/vte-0.49.1.tar.xz
 
