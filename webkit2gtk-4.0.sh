@@ -20,12 +20,12 @@ pkg-config --exists 'gstreamer-plugins-base-1.0' || ./gstreamer-plugins-base-1.0
 pkg-config --exists 'libwebp' || ./libwebp.sh
 pkg-config --exists 'libsecret-1' || ./libsecret-1.sh
 
-wget --no-clobber https://www.webkitgtk.org/releases/webkitgtk-2.16.2.tar.xz
+wget --no-clobber https://www.webkitgtk.org/releases/webkitgtk-2.17.3.tar.xz
 
-rm -rf webkitgtk-2.16.2/
-xzcat webkitgtk-2.16.2.tar.xz | tar x
+rm -rf webkitgtk-2.17.3/
+tar xf webkitgtk-2.17.3.tar.xz
 
-cd webkitgtk-2.16.2/
+cd webkitgtk-2.17.3/
 
 mkdir build
 cd build
