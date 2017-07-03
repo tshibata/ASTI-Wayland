@@ -3,6 +3,7 @@
 set -e
 
 # It requires:
+echo "#include<expat.h>" | cpp > /dev/null || ./expat.sh
 pkg-config --exists  'libffi' || ./libffi.sh
 pkg-config --exists  'libxml-2.0' || ./libxml-2.0.sh
 
