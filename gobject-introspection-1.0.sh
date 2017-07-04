@@ -6,6 +6,7 @@
 set -e
 
 # It requires:
+flex --version || ./flex.sh
 pkg-config --exists 'glib-2.0 >= 2.53.1' || ./glib-2.0.sh
 
 wget --no-clobber http://ftp.gnome.org/pub/gnome/sources/gobject-introspection/1.53/gobject-introspection-1.53.1.tar.xz
