@@ -6,6 +6,7 @@
 set -e
 
 # It requires:
+flex --version || ./flex.sh
 pkg-config --exists 'glib-2.0 >= 2.32.0' || ./glib-2.0.sh
 
 wget --no-clobber http://ftp.gnome.org/pub/gnome/sources/vala/0.36/vala-0.36.3.tar.xz
