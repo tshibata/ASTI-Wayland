@@ -6,6 +6,7 @@
 set -e
 
 # It requires:
+pkg-config --exists 'intltool >= 0.30' || ./intltool.sh
 perl -e "require XML::Parser;" || ./Perl-XML-Parser.sh
 
 wget --no-clobber https://www.x.org/archive/individual/data/xkeyboard-config/xkeyboard-config-2.20.tar.bz2
