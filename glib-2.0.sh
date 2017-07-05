@@ -6,6 +6,7 @@
 set -e
 
 # It requires:
+gettext --version || ./gettext.sh
 pkg-config --exists 'libpcre >= 8.13' || ./libpcre.sh
 pkg-config --exists  'libffi >= 3.0.0' || ./libffi.sh
 pkg-config --exists  'python >= 2.5' || ./python.sh
