@@ -4,6 +4,9 @@
 
 set -e
 
+# It requires:
+echo "#include<expat.h>" | cpp > /dev/null || ./expat.sh
+
 wget --no-clobber http://search.cpan.org/CPAN/authors/id/T/TO/TODDR/XML-Parser-2.44.tar.gz
 
 rm -rf XML-Parser-2.44/
