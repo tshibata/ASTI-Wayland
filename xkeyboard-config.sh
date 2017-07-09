@@ -6,7 +6,7 @@
 set -e
 
 # It requires:
-pkg-config --exists 'intltool >= 0.30' || ./intltool.sh
+intltool-update --version || ./intltool.sh # 'intltool >= 0.30'
 gettext --version || ./gettext.sh
 perl -e "require XML::Parser;" || ./Perl-XML-Parser.sh
 
