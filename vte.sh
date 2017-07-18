@@ -17,9 +17,12 @@ pkg-config --exists 'adwaita-icon-theme' || ./adwaita-icon-theme.sh
 wget --no-clobber http://ftp.gnome.org/pub/gnome/sources/vte/0.49/vte-0.49.1.tar.xz
 
 rm -rf vte-0.49.1/
+
 xzcat vte-0.49.1.tar.xz | tar x
 
 cd vte-0.49.1/
+
+patch -p1 -i ../vte-geometry-deprecated.patch
 
 ./configure --prefix=/usr \
             --sysconfdir=/etc
