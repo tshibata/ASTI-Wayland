@@ -6,6 +6,7 @@
 set -e
 
 # It requires:
+echo "#include<expat.h>" | cpp > /dev/null || ./expat.sh # or try to use --enable-libxml2
 pkg-config --exists 'freetype2' || ./freetype2.sh
 
 wget --no-clobber https://www.freedesktop.org/software/fontconfig/release/fontconfig-2.12.1.tar.bz2
