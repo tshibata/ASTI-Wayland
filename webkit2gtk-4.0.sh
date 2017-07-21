@@ -21,12 +21,12 @@ pkg-config --exists 'libwebp' || ./libwebp.sh
 pkg-config --exists 'libsecret-1' || ./libsecret-1.sh
 pkg-config --exists 'adwaita-icon-theme' || ./adwaita-icon-theme.sh
 
-wget --no-clobber https://www.webkitgtk.org/releases/webkitgtk-2.17.3.tar.xz
+wget --no-clobber https://www.webkitgtk.org/releases/webkitgtk-2.16.5.tar.xz
 
-rm -rf webkitgtk-2.17.3/
-tar xf webkitgtk-2.17.3.tar.xz
+rm -rf webkitgtk-2.16.5/
+tar xf webkitgtk-2.16.5.tar.xz
 
-cd webkitgtk-2.17.3/
+cd webkitgtk-2.16.5/
 
 mkdir build
 cd build
